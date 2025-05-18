@@ -36,7 +36,7 @@ public class Elephant extends Actor
         setImage(idleRight[0]);
     }
     
-    /*
+    /**
      * Elephant animation method
      */
     int imageIndex = 0;
@@ -56,9 +56,6 @@ public class Elephant extends Actor
         }
     }
     
-    //Label to signify out of bounds
-    Label outOfBounds = new Label("Stay in the Map.", 30);
-    SimpleTimer textShown = new SimpleTimer();
     public void act()
     {
         if(Greenfoot.isKeyDown("a")) {
@@ -73,6 +70,9 @@ public class Elephant extends Actor
         animateElephant();
     }
     
+    /**
+     * This method allows the Elephant to eat the apple and plays a noise whenever it does
+     */
     public void eat() {
         if(isTouching(Apple.class)) {
             removeTouching(Apple.class);
@@ -89,6 +89,9 @@ public class Elephant extends Actor
      * This method checks to see if the Elephant is within bounds of the world, and if it is on
      * the edge, it will teleport it back to the center and display a message
      */
+    
+    Label outOfBounds = new Label("Stay in the Map.", 30);
+    SimpleTimer textShown = new SimpleTimer();
     public void inBoundsCheck() {
         if(isAtEdge()) {
             textShown.mark();
