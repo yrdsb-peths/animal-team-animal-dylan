@@ -1,17 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Apple here.
+ * Apple: The food to eat
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Dylan 
+ * @version May 17 2025
  */
 public class Apple extends Actor
 {
     int speed = 2;
     GreenfootImage apple = new GreenfootImage("images/apple-fruit.png");
     public Apple() {
-        apple.scale(45, 55);
+        apple.scale(23, 27);
         setImage(apple);    
     }
     
