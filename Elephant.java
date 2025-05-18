@@ -41,7 +41,7 @@ public class Elephant extends Actor
      */
     int imageIndex = 0;
     public void animateElephant() {
-        if(animationTimer.millisElapsed() < 110)
+        if(animationTimer.millisElapsed() < 80)
         {
             return;
         }
@@ -56,6 +56,9 @@ public class Elephant extends Actor
         }
     }
     
+    //Label to signify out of bounds
+    Label outOfBounds = new Label("Stay in the Map.", 30);
+    SimpleTimer textShown = new SimpleTimer();
     public void act()
     {
         if(Greenfoot.isKeyDown("a")) {
@@ -66,7 +69,7 @@ public class Elephant extends Actor
             facing = "right";
         }
         eat();
-        
+        inBoundsCheck();        
         animateElephant();
     }
     
@@ -79,6 +82,24 @@ public class Elephant extends Actor
             
             elephantSound.setVolume(50);
             elephantSound.play();
+        }
+    }
+    
+    /**
+     * This method checks to see if the Elephant is within bounds of the world, and if it is on
+     * the edge, it will teleport it back to the center and display a message
+     */
+    public void inBoundsCheck() {
+        if(isAtEdge()) {
+            textShown.mark();
+            setLocation(300, 360);
+            World MyWorld = (World) getWorld();
+            MyWorld.addObject(outOfBounds, 300, 200);
+        }
+        //Remove label from getBackInBounds
+        if(textShown.millisElapsed() >= 1000) {
+            World MyWorld = (World) getWorld();
+            MyWorld.removeObject(outOfBounds);
         }
     }
 }
