@@ -1,20 +1,10 @@
-# Set up Greenfoot for VSCode
+The Hungry Elephant game
 
-[Mac]
-1. Open `Finder` and navigate to the Applications folder.
-2. Right-click on the Greenfoot app and select `Show Package Contents`.
-3. In the opened folder, go to `Contents -> Resources -> Java` and find the `greenfoot.jar` file.
-4. Copy this `greenfoot.jar` to the `/lib` Folder in this project.
+This game is about an elephant to that wants to eat apples but the apples get faster until he misses one
+Use keybinds 'A' and 'D' to move left and right respectively to get apples.
 
-[Windows]
-1. Open `File Explorer` and navigate to `C:\Program Files\Greenfoot` and locate the `greenfoot.jar` file.
-2. Copy this `greenfoot.jar` to the `\lib` Folder in this project.
+This project is a test to utilize GitHub and Greenfoot to create games, as well as a tutorial to get familiar
+with the various tools and classes utilized in Greenfoot.  This particular one has people work in teams to get
+us familiar with the many Github features that are meant for team projects.
 
-<br>
-<br>
-
-# project.greenfoot
-Copy the `project.greenfoot.md` file and rename it to `project.greenfoot`
-
-# Learn Markdown Basics
-[Markdown basics](https://www.markdownguide.org/getting-started/)
+Creator: Dylan Tam
