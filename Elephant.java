@@ -71,7 +71,7 @@ public class Elephant extends Actor
     }
     
     /**
-     * This method allows the Elephant to eat the apple and plays a noise whenever it does
+     * This method allows the Elephant to eat the apple and plays a noise
      */
     public void eat() {
         if(isTouching(Apple.class)) {
@@ -99,7 +99,7 @@ public class Elephant extends Actor
             World MyWorld = (World) getWorld();
             MyWorld.addObject(outOfBounds, 300, 200);
         }
-        //Remove label from getBackInBounds
+        //Remove label from getBackInBounds after 2 seconds
         if(textShown.millisElapsed() >= 2000) {
             World MyWorld = (World) getWorld();
             MyWorld.removeObject(outOfBounds);
