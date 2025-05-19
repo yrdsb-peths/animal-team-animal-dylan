@@ -19,7 +19,7 @@ public class Apple extends Actor
     {
         setLocation(getX(), getY() + speed);
         
-        // to remove apple and draw game over
+        // To remove apple and draw game over
         MyWorld world = (MyWorld) getWorld();
         if(getY() >= world.getHeight()) {
             world.gameOver();

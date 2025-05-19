@@ -20,7 +20,7 @@ public class MyWorld extends World {
     }
     
     /**
-     * End game, print "Game Over"
+     * This method ends the game, and prints "Game Over"
      */
     public void gameOver() {
         Label gameOverLabel = new Label("Game Over :(", 120);
@@ -40,6 +40,9 @@ public class MyWorld extends World {
         }
     }
     
+    /**
+     * Creates apples at locations across the x-plane
+     */
     public void createApple() {
         Apple apple = new Apple();
         apple.setSpeed(level);

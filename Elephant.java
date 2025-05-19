@@ -100,7 +100,7 @@ public class Elephant extends Actor
             MyWorld.addObject(outOfBounds, 300, 200);
         }
         //Remove label from getBackInBounds
-        if(textShown.millisElapsed() >= 1000) {
+        if(textShown.millisElapsed() >= 2000) {
             World MyWorld = (World) getWorld();
             MyWorld.removeObject(outOfBounds);
         }
